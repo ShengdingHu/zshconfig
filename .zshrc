@@ -4,8 +4,8 @@
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/hushengding/.oh-my-zsh"
-
+export ZSH="/Users/hushengding/.oh-my-zsh"
+BULLETTRAIN_CONTEXT_DEFAULT_USER=$USER
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,7 +70,9 @@ ZSH_THEME="bullet-train"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+        zsh-autosuggestions
+        zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,14 +105,14 @@ export PATH="/usr/local/opt/python@3.6/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hushengding/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/hushengding/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/hushengding/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/hushengding/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/hushengding/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/hushengding/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/hushengding/miniconda3/bin:$PATH"
+        export PATH="/Users/hushengding/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
